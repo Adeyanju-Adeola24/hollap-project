@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /prototype/
 
-Sitemap: https://adeyanju-adeola24.github.io/hollap-project/sitemap.xml
+Sitemap: https://adeyanju-adeola24.github.io/sitemap.xml
