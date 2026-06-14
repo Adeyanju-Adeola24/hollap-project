@@ -4,7 +4,7 @@ import AnimatedCounter from "./components/AnimatedCounter";
 import ParticleBackground from "./components/ParticleBackground";
 import FAQ from "./components/FAQ";
 import Testimonials from "./components/Testimonials";
-import Avatar from "./components/Avatar";
+import Avatar from "@/components/Avatar";
 
 export default function Home() {
   return (

@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import Avatar from "./Avatar";
+import Avatar from "@/components/Avatar";
 
 const testimonials = [
   {
