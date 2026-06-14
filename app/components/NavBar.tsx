@@ -3,10 +3,10 @@
 import { useState } from "react";
 
 const navLinks = [
-  { label: "Platform", href: "#markets" },
-  { label: "About", href: "#about" },
+  { label: "Platform", href: "/#markets" },
+  { label: "About", href: "/#about" },
   { label: "Dashboard", href: "/dashboard" },
-  { label: "Investors", href: "#investors" },
+  { label: "Investors", href: "/#investors" },
   { label: "Ambassadors", href: "/ambassadors" },
   { label: "Prototype", href: "/prototype" },
   { label: "Blog", href: "/blog" },
