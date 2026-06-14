@@ -72,7 +72,7 @@ export default function AdminUsersPage() {
           {filtered.map((user) => (
             <div key={user.id} className="grid grid-cols-1 sm:grid-cols-6 gap-3 px-6 py-4 items-center text-sm">
               <div className="col-span-2 flex items-center gap-3 min-w-0">
-                <Avatar src={user.avatar} name={user.name} size="sm" />
+                <Avatar src="" name={user.name} size="sm" />
                 <div className="min-w-0">
                   <p className="text-sm font-medium truncate">{user.name}</p>
                   <p className="text-[10px] text-gray-500 truncate">{user.email}</p>
