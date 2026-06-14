@@ -322,7 +322,7 @@ export const productsExtra = [
     title: "Samsung Galaxy Buds2 Pro",
     price: 95000,
     currency: "NGN",
-    vendor: vendors[5],
+    vendor: vendorsExtra[0],
     images: ["https://images.unsplash.com/photo-1572569511254-d8f925fe2cbb?w=600&h=600&fit=crop"],
     category: "Electronics",
     condition: "New",
@@ -337,7 +337,7 @@ export const productsExtra = [
     title: "Wireless Mechanical Keyboard",
     price: 45000,
     currency: "NGN",
-    vendor: vendors[5],
+    vendor: vendorsExtra[0],
     images: ["https://images.unsplash.com/photo-1587829741301-dc798b83add3?w=600&h=600&fit=crop"],
     category: "Electronics",
     condition: "New",
@@ -352,7 +352,7 @@ export const productsExtra = [
     title: "Nike Air Force 1 White",
     price: 65000,
     currency: "NGN",
-    vendor: vendors[7],
+    vendor: vendorsExtra[2],
     images: ["https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=600&h=600&fit=crop"],
     category: "Fashion",
     condition: "New",
@@ -367,7 +367,7 @@ export const productsExtra = [
     title: "Protein Shake Meal Pack (x7)",
     price: 28000,
     currency: "NGN",
-    vendor: vendors[6],
+    vendor: vendorsExtra[1],
     images: ["https://images.unsplash.com/photo-1593095948071-474c5cc2c1cf?w=600&h=600&fit=crop"],
     category: "Food",
     condition: "Fresh",
@@ -813,6 +813,12 @@ export const moderationQueue: ModerationItem[] = [
   { id: "mod-6", type: "review", content: "Harassing comment on vendor profile", author: "User #7788", reason: "Harassment", reportedBy: "Vendor #003", reportedAt: "3 days ago", status: "dismissed", flags: 2 },
   { id: "mod-7", type: "moment", content: "Spam - repeated posting of same content", author: "User #9900", reason: "Spam", reportedBy: "MI Auto-flag", reportedAt: "3 days ago", status: "pending", flags: 6 },
 ]
+
+export const allVendors = [...vendors, ...vendorsExtra]
+export const allProducts = [...products, ...productsExtra]
+export const allBulletin = [...bulletinPosts, ...bulletinExtra]
+export const allMoments = [...moments, ...momentsExtra]
+export const allReviews = [...reviewsExtra]
 
 export const adminAnalytics = {
   dailyActiveUsers: [1200, 1450, 1320, 1580, 1720, 1650, 1890, 2100, 1980, 2230, 2450, 2340, 2560, 2780, 2900, 3120, 3050, 3340, 3560, 3780, 3900, 4120, 4230, 4450, 4670, 4890, 5010, 5230, 5450, 5670],

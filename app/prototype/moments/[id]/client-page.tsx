@@ -1,5 +1,5 @@
 "use client";
-import { moments } from "@/lib/data";
+import { allMoments as moments } from "@/lib/data";
 import Link from "next/link";
 import { useParams } from "next/navigation";
 import { useState } from "react";

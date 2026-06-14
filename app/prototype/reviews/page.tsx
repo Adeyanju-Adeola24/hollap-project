@@ -1,8 +1,9 @@
 "use client";
 import Link from "next/link";
 import Avatar from "@/components/Avatar";
+import { allReviews } from "@/lib/data";
 
-const allReviews = [
+const inlineReviews = [
   { id: "rv1", user: "Michael O.", avatar: "MO", vendor: "Chidi's Gadgets", product: "iPhone 14 Pro Max", rating: 5, text: "Exactly as described. Fast delivery and great communication. Would buy again!", time: "2 days ago", likes: 12 },
   { id: "rv2", user: "Sarah K.", avatar: "SK", vendor: "Amina's Fashion", product: "African Print Blazer", rating: 5, text: "The blazer is gorgeous! Perfect fit and beautiful fabric. Got so many compliments.", time: "1 week ago", likes: 24 },
   { id: "rv3", user: "Tunde A.", avatar: "TA", vendor: "Kofi's Books & Supplies", product: "Calculus Textbook", rating: 4, text: "Good condition as described. Fair price. Would recommend.", time: "2 weeks ago", likes: 5 },
@@ -12,6 +13,8 @@ const allReviews = [
   { id: "rv7", user: "Oluwaseun A.", avatar: "OA", vendor: "Amina's Fashion", product: "Streetwear Hoodie", rating: 4, text: "Nice hoodie, quality material. Runs slightly large but I actually prefer the oversized look.", time: "1 month ago", likes: 8 },
   { id: "rv8", user: "Ngozi E.", avatar: "NE", vendor: "Zara's Beauty Hub", product: "Vitamin C Serum", rating: 5, text: "Third bottle I'm ordering! This stuff works. Zara always delivers quickly.", time: "2 months ago", likes: 33 },
 ]
+
+const allReviews = [...inlineReviews, ...allReviews]
 
 export default function ReviewsPage() {
   return (

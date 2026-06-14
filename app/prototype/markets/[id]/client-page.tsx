@@ -1,5 +1,5 @@
 "use client";
-import { products, vendors } from "@/lib/data";
+import { allProducts as products, allVendors as vendors } from "@/lib/data";
 import Link from "next/link";
 import { useParams } from "next/navigation";
 import { useState } from "react";

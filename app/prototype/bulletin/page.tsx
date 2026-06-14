@@ -1,5 +1,5 @@
 "use client";
-import { bulletinPosts } from "@/lib/data";
+import { allBulletin as bulletinPosts } from "@/lib/data";
 import Avatar from "@/components/Avatar";
 
 const badgeColors: Record<string, string> = {

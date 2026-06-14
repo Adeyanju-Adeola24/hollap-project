@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { products, categories } from "@/lib/data";
+import { allProducts as products, categories } from "@/lib/data";
 import Link from "next/link";
 
 export default function MarketsPage() {

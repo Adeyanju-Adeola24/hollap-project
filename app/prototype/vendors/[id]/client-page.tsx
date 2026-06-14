@@ -1,5 +1,5 @@
 "use client";
-import { vendors, products } from "@/lib/data";
+import { allVendors as vendors, allProducts as products } from "@/lib/data";
 import Link from "next/link";
 import { useParams } from "next/navigation";
 import Avatar from "@/components/Avatar";

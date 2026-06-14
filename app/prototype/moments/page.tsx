@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { moments } from "@/lib/data";
+import { allMoments as moments } from "@/lib/data";
 import Link from "next/link";
 import Avatar from "@/components/Avatar";
 
