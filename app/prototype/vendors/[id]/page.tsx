@@ -4,10 +4,6 @@ export function generateStaticParams() {
   return [{ id: "1" }, { id: "2" }];
 }
 
-export default function VendorProfilePage({
-  params,
-}: {
-  params: Promise<{ id: string }>;
-}) {
-  return <ClientVendorProfile params={params} />;
+export default function VendorProfilePage() {
+  return <ClientVendorProfile />;
 }
