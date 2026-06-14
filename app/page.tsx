@@ -4,6 +4,7 @@ import AnimatedCounter from "./components/AnimatedCounter";
 import ParticleBackground from "./components/ParticleBackground";
 import FAQ from "./components/FAQ";
 import Testimonials from "./components/Testimonials";
+import Avatar from "./components/Avatar";
 
 export default function Home() {
   return (
@@ -294,9 +295,7 @@ export default function Home() {
 
         <div className="flex justify-center">
           <div className="bg-white/5 rounded-xl p-6 border border-white/10 max-w-sm text-center">
-            <div className="w-20 h-20 rounded-full bg-gradient-to-r from-[#833AB4] to-[#0088cc] mx-auto mb-4 flex items-center justify-center text-2xl font-bold">
-              D
-            </div>
+            <Avatar src="" name="David" size="xl" />
             <h3 className="text-xl font-semibold">David</h3>
             <p className="text-[#0088cc] text-sm font-medium mb-3">Founder & CEO</p>
             <p className="text-gray-400 text-sm leading-relaxed">

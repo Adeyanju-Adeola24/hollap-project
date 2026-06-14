@@ -3,6 +3,7 @@ import { chatThreads, chatMessages } from "@/lib/data";
 import Link from "next/link";
 import { useParams } from "next/navigation";
 import { useState, useRef, useEffect } from "react";
+import Avatar from "@/components/Avatar";
 
 export default function ClientChatPage() {
   const params = useParams()
@@ -39,9 +40,7 @@ export default function ClientChatPage() {
       <div className="px-4 py-3 border-b border-white/5 flex items-center gap-3">
         <Link href="/prototype/chat" className="text-gray-400 hover:text-white transition-colors text-sm">←</Link>
         <div className="relative">
-          <div className="w-10 h-10 rounded-full bg-gradient-to-r from-[#833AB4] to-[#0088cc] flex items-center justify-center text-sm font-bold">
-            {thread.avatar}
-          </div>
+          <Avatar src={thread.avatar} name={thread.user} size="md" />
           {thread.online && <span className="absolute bottom-0 right-0 w-2.5 h-2.5 bg-green-500 border-2 border-[#0a0a0a] rounded-full" />}
         </div>
         <div>

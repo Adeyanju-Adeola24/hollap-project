@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { moments } from "@/lib/data";
 import Link from "next/link";
+import Avatar from "@/components/Avatar";
 
 export default function MomentsPage() {
   const [feed, setFeed] = useState(moments)
@@ -72,9 +73,7 @@ export default function MomentsPage() {
             </div>
             <form onSubmit={handleShare}>
               <div className="flex gap-3 mb-4">
-                <div className="w-10 h-10 rounded-full bg-gradient-to-r from-[#833AB4] to-[#0088cc] flex items-center justify-center text-sm font-bold shrink-0">
-                  YO
-                </div>
+                <Avatar src="" name="You" size="md" />
                 <textarea
                   value={shareText}
                   onChange={(e) => setShareText(e.target.value)}
@@ -114,18 +113,16 @@ export default function MomentsPage() {
           >
             {/* User info */}
             <div className="flex items-center gap-3 px-4 pt-4 pb-2">
-              <div className="w-9 h-9 rounded-full bg-gradient-to-r from-[#833AB4] to-[#0088cc] flex items-center justify-center text-xs font-bold">
-                {moment.avatar}
-              </div>
+              <Avatar src={moment.avatar} name={moment.user} size="sm" />
               <div className="flex-1 min-w-0">
                 <p className="text-sm font-medium">{moment.user}</p>
                 <p className="text-[10px] text-gray-500">{moment.university} · {moment.time}</p>
               </div>
             </div>
 
-            {/* Image/Emoji */}
-            <div className="mx-4 h-48 bg-gradient-to-br from-[#1a1a2e] to-[#16213e] rounded-xl flex items-center justify-center text-5xl">
-              {moment.image}
+            {/* Image */}
+            <div className="mx-4 h-48 rounded-xl overflow-hidden bg-[#1a1a2e]">
+              <img src={moment.image} alt="" className="w-full h-full object-cover" loading="lazy" />
             </div>
 
             {/* Caption */}

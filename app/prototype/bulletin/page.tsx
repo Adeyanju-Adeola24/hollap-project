@@ -1,5 +1,6 @@
 "use client";
 import { bulletinPosts } from "@/lib/data";
+import Avatar from "@/components/Avatar";
 
 const badgeColors: Record<string, string> = {
   Official: "bg-[#0088cc]/20 text-[#0088cc]",
@@ -22,9 +23,7 @@ export default function BulletinPage() {
           <div key={post.id} className="bg-white/5 rounded-xl p-4 border border-white/10">
             {/* Header */}
             <div className="flex items-center gap-3 mb-3">
-              <div className="w-9 h-9 rounded-full bg-gradient-to-br from-[#1a1a2e] to-[#0088cc] flex items-center justify-center text-xs font-bold">
-                {post.avatar}
-              </div>
+              <Avatar src={post.avatar} name={post.author} size="md" />
               <div className="flex-1 min-w-0">
                 <div className="flex items-center gap-2">
                   <p className="text-sm font-medium">{post.author}</p>

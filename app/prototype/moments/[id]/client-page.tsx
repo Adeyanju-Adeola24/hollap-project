@@ -3,6 +3,7 @@ import { moments } from "@/lib/data";
 import Link from "next/link";
 import { useParams } from "next/navigation";
 import { useState } from "react";
+import Avatar from "@/components/Avatar";
 
 export default function ClientMomentDetail() {
   const params = useParams()
@@ -43,17 +44,15 @@ export default function ClientMomentDetail() {
 
       <div className="bg-white/5 rounded-xl border border-white/10 overflow-hidden mx-4 mt-4">
         <div className="flex items-center gap-3 px-4 pt-4 pb-2">
-          <div className="w-9 h-9 rounded-full bg-gradient-to-r from-[#833AB4] to-[#0088cc] flex items-center justify-center text-xs font-bold">
-            {moment.avatar}
-          </div>
+          <Avatar src={moment.avatar} name={moment.user} size="md" />
           <div className="flex-1 min-w-0">
             <p className="text-sm font-medium">{moment.user}</p>
             <p className="text-[10px] text-gray-500">{moment.university} · {moment.time}</p>
           </div>
         </div>
 
-        <div className="mx-4 h-48 bg-gradient-to-br from-[#1a1a2e] to-[#16213e] rounded-xl flex items-center justify-center text-5xl">
-          {moment.image}
+        <div className="mx-4 h-48 rounded-xl overflow-hidden bg-[#1a1a2e]">
+          <img src={moment.image} alt="" className="w-full h-full object-cover" loading="lazy" />
         </div>
 
         <div className="px-4 py-3">
@@ -82,9 +81,7 @@ export default function ClientMomentDetail() {
         <div className="space-y-3 mb-4">
           {comments.map((c, i) => (
             <div key={i} className="flex items-start gap-3">
-              <div className="w-7 h-7 rounded-full bg-gradient-to-r from-[#833AB4] to-[#0088cc] flex items-center justify-center text-[10px] font-bold shrink-0">
-                {c.user[0]}
-              </div>
+              <Avatar src="" name={c.user} size="sm" />
               <div>
                 <p className="text-xs font-medium">{c.user}</p>
                 <p className="text-xs text-gray-400">{c.text}</p>

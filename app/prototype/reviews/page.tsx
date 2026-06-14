@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import Avatar from "@/components/Avatar";
 
 const allReviews = [
   { id: "rv1", user: "Michael O.", avatar: "MO", vendor: "Chidi's Gadgets", product: "iPhone 14 Pro Max", rating: 5, text: "Exactly as described. Fast delivery and great communication. Would buy again!", time: "2 days ago", likes: 12 },
@@ -48,9 +49,7 @@ export default function ReviewsPage() {
         {allReviews.map((review) => (
           <div key={review.id} className="bg-white/5 rounded-xl p-4 border border-white/10">
             <div className="flex items-center gap-3 mb-2">
-              <div className="w-9 h-9 rounded-full bg-gradient-to-r from-[#833AB4] to-[#0088cc] flex items-center justify-center text-xs font-bold">
-                {review.avatar}
-              </div>
+              <Avatar src="" name={review.user} size="sm" />
               <div className="flex-1 min-w-0">
                 <p className="text-sm font-medium">{review.user}</p>
                 <p className="text-[10px] text-gray-500">{review.time}</p>

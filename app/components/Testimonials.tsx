@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Avatar from "./Avatar";
 
 const testimonials = [
   {
@@ -56,9 +57,7 @@ export default function Testimonials() {
                   : "opacity-0 translate-y-4 pointer-events-none"
               }`}
             >
-              <div className="w-14 h-14 rounded-full bg-gradient-to-r from-[#833AB4] to-[#0088cc] flex items-center justify-center text-lg font-bold mb-4">
-                {t.avatar}
-              </div>
+              <Avatar src="" name={t.name} size="lg" />
               <blockquote className="text-lg text-gray-300 italic max-w-2xl mb-6 leading-relaxed">
                 &ldquo;{t.quote}&rdquo;
               </blockquote>

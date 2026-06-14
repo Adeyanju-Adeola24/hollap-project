@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import { platformUsers, type PlatformUser } from "@/lib/data";
+import Avatar from "@/components/Avatar";
 
 export default function AdminUsersPage() {
   const [users, setUsers] = useState(platformUsers)
@@ -71,9 +72,7 @@ export default function AdminUsersPage() {
           {filtered.map((user) => (
             <div key={user.id} className="grid grid-cols-1 sm:grid-cols-6 gap-3 px-6 py-4 items-center text-sm">
               <div className="col-span-2 flex items-center gap-3 min-w-0">
-                <div className="w-8 h-8 rounded-full bg-gradient-to-r from-[#833AB4] to-[#0088cc] flex items-center justify-center text-xs font-bold shrink-0">
-                  {user.name.split(" ").map(n => n[0]).join("").slice(0, 2)}
-                </div>
+                <Avatar src={user.avatar} name={user.name} size="sm" />
                 <div className="min-w-0">
                   <p className="text-sm font-medium truncate">{user.name}</p>
                   <p className="text-[10px] text-gray-500 truncate">{user.email}</p>

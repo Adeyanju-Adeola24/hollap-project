@@ -3,6 +3,7 @@ import { products, vendors } from "@/lib/data";
 import Link from "next/link";
 import { useParams } from "next/navigation";
 import { useState } from "react";
+import Avatar from "@/components/Avatar";
 
 const reviews = [
   { id: "r1", user: "Michael O.", avatar: "MO", rating: 5, text: "Exactly as described. Fast delivery too!", time: "2 days ago" },
@@ -53,9 +54,7 @@ export default function ClientProductDetail() {
           href={`/prototype/vendors/${product.vendor.id}`}
           className="flex items-center gap-3 bg-white/5 rounded-xl p-4 border border-white/10 mt-6 hover:bg-white/[0.07] transition-colors"
         >
-          <div className="w-10 h-10 rounded-full bg-gradient-to-r from-[#833AB4] to-[#0088cc] flex items-center justify-center text-sm font-bold">
-            {product.vendor.avatar}
-          </div>
+          <Avatar src={product.vendor.avatar} name={product.vendor.name} size="md" />
           <div className="flex-1 min-w-0">
             <p className="text-sm font-medium">{product.vendor.shop}</p>
             <p className="text-xs text-gray-500">★ {product.vendor.rating} · {product.vendor.reviews} reviews</p>

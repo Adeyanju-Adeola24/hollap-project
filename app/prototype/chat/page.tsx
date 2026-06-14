@@ -1,6 +1,7 @@
 "use client";
 import { chatThreads } from "@/lib/data";
 import Link from "next/link";
+import Avatar from "@/components/Avatar";
 
 export default function ChatListPage() {
   return (
@@ -18,9 +19,7 @@ export default function ChatListPage() {
             className="flex items-center gap-3 px-3 py-3 rounded-xl hover:bg-white/[0.05] transition-colors"
           >
             <div className="relative shrink-0">
-              <div className="w-12 h-12 rounded-full bg-gradient-to-r from-[#833AB4] to-[#0088cc] flex items-center justify-center text-sm font-bold">
-                {thread.avatar}
-              </div>
+              <Avatar src={thread.avatar} name={thread.user} size="lg" />
               {thread.online && (
                 <span className="absolute bottom-0 right-0 w-3 h-3 bg-green-500 border-2 border-[#0a0a0a] rounded-full" />
               )}

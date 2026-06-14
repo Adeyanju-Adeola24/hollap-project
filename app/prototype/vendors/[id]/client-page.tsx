@@ -2,6 +2,7 @@
 import { vendors, products } from "@/lib/data";
 import Link from "next/link";
 import { useParams } from "next/navigation";
+import Avatar from "@/components/Avatar";
 
 export default function ClientVendorProfile() {
   const params = useParams()
@@ -21,9 +22,7 @@ export default function ClientVendorProfile() {
   return (
     <div className="pt-14 pb-20 max-w-lg mx-auto px-4">
       <div className="text-center py-6">
-        <div className="w-20 h-20 rounded-full bg-gradient-to-r from-[#833AB4] to-[#0088cc] flex items-center justify-center text-2xl font-bold mx-auto mb-4">
-          {vendor.avatar}
-        </div>
+        <Avatar src={vendor.avatar} name={vendor.name} size="xl" />
         <h1 className="text-xl font-bold">{vendor.shop}</h1>
         <p className="text-sm text-gray-400">{vendor.university}</p>
         <div className="flex items-center justify-center gap-3 mt-2">
